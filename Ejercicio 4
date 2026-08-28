@@ -1,0 +1,28 @@
+'''
+
+Andrés Elías May Sánchez
+Ing en TI
+ID: 592567
+Ejercicio 4
+
+'''
+
+nombre_archivo = input("Ingresa nombre de archivo: ")
+
+try:
+    manejador = open(nombre_archivo)
+except:
+    print("No se pudo abrir el archivo:", nombre_archivo)
+    exit()
+
+palabras_unicas = []
+
+for linea in manejador:
+    palabras = linea.split()
+    for palabra in palabras:
+        # Revisar si la palabra ya se encuentra previamente en la lista
+        if palabra not in palabras_unicas:
+            palabras_unicas.append(palabra)
+
+palabras_unicas.sort()
+print(palabras_unicas)

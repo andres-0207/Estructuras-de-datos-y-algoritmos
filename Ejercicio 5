@@ -1,0 +1,31 @@
+'''
+
+Andrés Elías May Sánchez
+Ing en TI
+ID: 592567
+Ejercicio 5
+
+'''
+
+nombre_archivo = input("Ingresa un nombre de archivo: ")
+
+try:
+    manejador = open(nombre_archivo)
+except:
+    print("No se pudo abrir el archivo:", nombre_archivo)
+    exit()
+
+contador_from = 0
+
+for linea in manejador:
+    linea = linea.rstrip()
+    palabras = linea.split()
+    
+    if len(palabras) == 0:
+        continue
+        
+    if palabras[0] == 'From':
+        print(palabras[1])
+        contador_from += 1
+
+print(f"Hay {contador_from} lineas en el archivo con la palabra From al inicio")

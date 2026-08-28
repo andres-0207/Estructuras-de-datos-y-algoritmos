@@ -1,0 +1,67 @@
+'''
+
+Andrés Elías May Sánchez
+Ing en TI
+ID: 592567
+Ejemplos del capítulo con valores personalizados
+
+'''
+
+print("--- 1. Creación y mutabilidad de listas ---")
+frutas = ["Manzana", "Pera", "Plátano"]
+precios = [15, 30]
+vacia = []
+
+print("Lista inicial de frutas:", frutas)
+precios[1] = 45
+print("Precios actualizados (índice 1 cambiado a 45):", precios)
+
+print("¿'Pera' está en frutas?", "Pera" in frutas)
+print("¿'Mango' está en frutas?", "Mango" in frutas)
+
+
+print("\n--- 2. Recorriendo una lista y actualizándola ---")
+for i in range(len(precios)):
+    precios[i] = precios[i] * 2
+print("Precios duplicados usando índices:", precios)
+
+
+print("\n--- 3. Operaciones de listas (+ y *) ---")
+lista_a = [10, 20]
+lista_b = [30, 40]
+concatenada = lista_a + lista_b
+repetida = [5] * 3
+print("Concatenación:", concatenada)
+print("Repetición:", repetida)
+
+
+print("\n--- 4. Rebanado (Slicing) ---")
+letras = ["m", "n", "o", "p", "q", "r"]
+print("Lista original:", letras)
+print("Elementos del índice 1 al 3:", letras[1:4])
+print("Copia completa usando rebanado:", letras[:])
+
+
+print("\n--- 5. Métodos de listas (append, extend, sort) ---")
+colores = ["rojo", "azul", "verde"]
+colores.append("amarillo")
+print("Después de append('amarillo'):", colores)
+
+otros_colores = ["morado", "naranja"]
+colores.extend(otros_colores)
+print("Después de extend:", colores)
+
+colores.sort()
+print("Lista de colores ordenada alfabéticamente:", colores)
+
+
+print("\n--- 6. Eliminación de elementos (pop, del, remove) ---")
+eliminado_pop = colores.pop(0)  # Elimina el primer elemento
+print(f"Elemento eliminado con pop({0}): {eliminado_pop}")
+print("Lista tras pop:", colores)
+
+del colores[1]
+print("Lista tras usar del en el índice 1:", colores)
+
+colores.remove("verde")
+print("Lista tras usar remove('verde'):", colores)

@@ -1,6 +1,4 @@
-Andrés Elías May Sánchez
-Ing en TI
-ID: 592567
+Andrés Elías May Sánchez -- Ing. en TI -- ID: 592567
 
 Utilizando como referencia el Capitulo 8. Listas del Libro Python para todos, cree el codigo necesario en el lenguaje de su preferencia. (Puede utilizar python)
 
